@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/emart-app/static/css/main.37df468c.css",
-    "main.js": "/emart-app/static/js/main.ada490c4.js",
+    "main.js": "/emart-app/static/js/main.b141ea3c.js",
     "index.html": "/emart-app/index.html",
     "main.37df468c.css.map": "/emart-app/static/css/main.37df468c.css.map",
-    "main.ada490c4.js.map": "/emart-app/static/js/main.ada490c4.js.map"
+    "main.b141ea3c.js.map": "/emart-app/static/js/main.b141ea3c.js.map"
   },
   "entrypoints": [
     "static/css/main.37df468c.css",
-    "static/js/main.ada490c4.js"
+    "static/js/main.b141ea3c.js"
   ]
 }
