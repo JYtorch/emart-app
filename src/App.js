@@ -1,24 +1,19 @@
-import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import './App.css';
 import Items from './components/Items';
 import Menu from './components/Menu';
+import useFetchItems from './useFetchItems';
 
 function App() {
-  const [items, setItems] = useState([])
-  useEffect(() => {
-    const getItems = async () => {
-      const res = await axios.get('/data.json')
-      setItems(res.data)
-    }
-    getItems()
-  }, [])
+  const [query, setQuery] = useState('전체')
+  const [pageNumber, setPageNumber] = useState(0)
+  const { items, hasMore, loading, error } = useFetchItems(query, pageNumber, setPageNumber)
 
   return (
-    <div className="App">
-      <Menu />
-      <Items items={items} />
-    </div>
+    <>
+      <Menu setQuery={setQuery} />
+      <Items items={items} pageNumber={pageNumber} loading={loading} error={error} setPageNumber={setPageNumber} hasMore={hasMore}/>
+    </>
   );
 }
 

@@ -1,0 +1,152 @@
+.menu-container {
+    width: 100%;
+    padding-top: 48px;
+    background-color: #fff;
+}
+.menu-title {
+    font-size: 1.125rem;
+    letter-spacing: -.5px;
+    font-weight: 500;
+    padding: 0 20px;
+    margin-bottom: 12px;
+}
+.toggle-box {
+    position: relative;
+}
+.slide-wrapper {
+    display: flex;
+    overflow-x: auto;
+    border-bottom: 1px solid #f3f3f3;
+    padding-right: 40vw;
+    padding-bottom: 14px;
+}
+.slide-wrapper::-webkit-scrollbar {
+    width: 0px;
+    display: none;
+}
+.slide {
+    box-sizing: border-box;
+    margin-left: 20px;
+    min-width: max-content;
+    text-align: center;
+    padding-bottom: 7px;
+}
+.txt {
+    color: #767676;
+    padding-bottom: 2px;
+    font-size: 14px;
+}
+.ern-leaflet-swiper-menu:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: '';
+    display: inline-block;
+    width: 26px;
+    height: 20px;
+    background-color: #fff;
+    z-index: 2;
+}
+.ern-leaflet-swiper-menu:after {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    content: '';
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+    background: url(https://stimg.emart.com/app/static/images/prd/gradation-leaflet-menu.png) no-repeat;
+    background-size: 100%;
+    z-index: 2;
+}
+#sticky-menu {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0; /* required */
+    z-index: 3;
+}
+
+.slide-container::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: '';
+    display: inline-block;
+    width: 26px;
+    height: 20px;
+    background-color: #fff;
+    z-index: 2;
+}
+.slide-container::after {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    content: '';
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+    background: url(https://stimg.emart.com/app/static/images/prd/gradation-leaflet-menu.png) no-repeat;
+    background-size: 100%;
+    z-index: 2;
+}
+.toggle-button {
+    position: absolute;
+    top: -8px;
+    right: 3px;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: url(https://stimg.emart.com/app/static/images/common/bg-select01.png) no-repeat center;
+    background-size: 6px 4px;
+    z-index: 3;
+}
+.opened-menu-container {
+    position: absolute;
+    left: 0;
+    background-color: #fff;
+    z-index: 5;
+    width: 100%;
+    top: 74.4px;
+}
+.opened-menu {
+    padding: 0 20px 13px 20px;
+    margin-top: 10px;
+}
+.opened-menu .menu-item-txt {
+    height: 32px;
+    line-height: 2rem;
+    font-size: .813rem;
+    border-color: #e8e8e8;
+    border-radius: 32px;
+    margin: 0 2px 8px 2px;
+}
+.menu-item-txt {
+    margin-right: 3px;
+    position: relative;
+    display: inline-block;
+    padding: 0 8px;
+    height: 24px;
+    line-height: 1.375rem;
+    font-size: .688rem;
+    font-weight: 500;
+    color: #666;
+    text-align: center;
+    border: 1px solid #666;
+    border-radius: 11px;
+    background: #fff;
+    vertical-align: top;
+    margin-bottom: 3px;
+}
+.open-menu-title {
+    border-bottom: 1px solid #f3f3f3;
+    margin: 0 20px;
+    padding: 1rem 0 1rem 0;
+    font-family: apple sd gothic neo,Apple SD Gothid Neo,'apple sd gothic neo','Apple SD Gothid Neo',NotoSans,NotoSans,notosans,Roboto,sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+.txt-active {
+    background-color: #424242;
+    border-color: #424242;
+    color: #fff;
+}

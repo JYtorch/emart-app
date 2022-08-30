@@ -1,0 +1,15 @@
+.ern-product-list {
+    max-width: auto;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 1rem;
+} 
+/* 600px 보다 크면 2열 */
+@media (min-width: 600px) {
+    .ern-product-list { grid-template-columns: repeat(2, 1fr); }
+}
+  
+/* 1024px 보다 크면 3열 */
+@media (min-width: 1024px) {
+    .ern-product-list { grid-template-columns: repeat(3, 1fr); }
+}
