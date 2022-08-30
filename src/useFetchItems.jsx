@@ -17,7 +17,7 @@ export default function useFetchItems(query, pageNumber, setPageNumber) {
   
     useEffect(() => {
         async function getItems () {
-            const res = await fetch('/data.json')
+            const res = await fetch('./data.json')
     
             let data = await res.json()
             if (query !== '전체') {
