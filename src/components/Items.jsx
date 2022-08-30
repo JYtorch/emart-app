@@ -20,18 +20,20 @@ function Items({items, loading, error, setPageNumber, hasMore}) {
         })
         if (node) observer.current.observe(node)
     }, [hasMore, getNextPage])
-    
+
   return (
-    <ul className="ern-product-list">
-        {items && items.map((item, idx) => {
-            if (items.length === idx + 1) {
-                return <Item ref={lastItemRef} item={item} key={idx} />
-            }
-            return <Item item={item} key={idx} />
-        })}
-        {loading && <p style={{textAlign: 'center', paddingBottom: '20px'}}>Loading...</p>}
+    <>
+        <ul className="ern-product-list">
+            {items && items.map((item, idx) => {
+                if (items.length === idx + 1) {
+                    return <Item ref={lastItemRef} item={item} key={idx} />
+                }
+                return <Item item={item} key={idx} />
+            })}
+        </ul>
+        {loading && <p style={{textAlign: 'center', paddingBottom: '20px', width: '100%'}}>Loading...</p>}
         {error && <p>Error</p>}
-    </ul>
+    </>
   )
 }
 
