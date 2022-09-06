@@ -6,7 +6,7 @@ const activeMenuStyle = {
   borderBottom: '3px solid #222'
 }
 
-function Menu({setQuery}) {
+function Menu({setQuery, setPageNumber}) {
   const [isOpen, setIsOpen] = useState(false)
   const [activeMenu, setActiveMenu] = useState("전체")
   let menuWrapper = useRef()
@@ -29,8 +29,8 @@ function Menu({setQuery}) {
         window.scrollTo({top: 0, behavior: 'smooth'})
         return
       }
-      e.target.scrollIntoView({behavior: "smooth", inline: "center", block: 'nearest'})
-
+      setPageNumber(0)
+      window.scrollTo({top: 0})
     } else {
       menuWrapper = menuWrapper.current.childNodes[1].childNodes[0].childNodes[0].childNodes
       for (let i = 0; i < menuWrapper.length; i++) {

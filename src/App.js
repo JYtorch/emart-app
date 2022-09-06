@@ -11,7 +11,7 @@ function App() {
 
   return (
     <>
-      <Menu setQuery={setQuery} />
+      <Menu setQuery={setQuery} setPageNumber={setPageNumber} />
       <Items items={items} pageNumber={pageNumber} loading={loading} error={error} setPageNumber={setPageNumber} hasMore={hasMore}/>
     </>
   );
