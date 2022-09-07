@@ -6,7 +6,7 @@ const activeMenuStyle = {
   borderBottom: '3px solid #222'
 }
 
-function Menu({setQuery, setPageNumber}) {
+function Menu({changeQuery, getNextPage}) {
   const [isOpen, setIsOpen] = useState(false)
   const [activeMenu, setActiveMenu] = useState("전체")
   let menuWrapper = useRef()
@@ -22,15 +22,16 @@ function Menu({setQuery, setPageNumber}) {
   function handleMenu (e) {
     setIsOpen(false)
     setActiveMenu(e.target.textContent)
-    setQuery(e.target.textContent)
+    changeQuery(e.target.textContent)
 
     if (e.target.className === 'txt' || e.target.className === 'slide') {
       if (e.target.textContent === activeMenu) {
         window.scrollTo({top: 0, behavior: 'smooth'})
         return
       }
-      setPageNumber(0)
-      window.scrollTo({top: 0})
+      getNextPage(0)
+      window.scrollTo({ top: 0 })
+      scrollToTarget(e.target)
     } else {
       menuWrapper = menuWrapper.current.childNodes[1].childNodes[0].childNodes[0].childNodes
       for (let i = 0; i < menuWrapper.length; i++) {
@@ -75,4 +76,4 @@ function Menu({setQuery, setPageNumber}) {
   )
 }
 
-export default Menu
+export default React.memo(Menu)

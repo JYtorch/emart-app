@@ -1,14 +1,10 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
-export default function useFetchItems(query, pageNumber, setPageNumber) {
+export default function useFetchItems(query, pageNumber, getNextPage) {
     const [items, setItems] = useState([])
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(false)
     const [hasMore, setHasMore] = useState(false)
-    
-    const getNextPage = useCallback((value) => {
-        setPageNumber(value)
-    }, [setPageNumber])
 
     useEffect(() => {
       setItems([])

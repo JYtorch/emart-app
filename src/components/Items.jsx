@@ -2,12 +2,7 @@ import React, { useCallback, useRef } from 'react'
 import Item from './Item'
 import './items.css'
 
-function Items({items, loading, error, setPageNumber, hasMore}) {
-
-    const getNextPage = useCallback((value) => {
-        setPageNumber(value)
-    }, [setPageNumber])
-
+function Items({items, loading, error, getNextPage, hasMore}) {
     const observer = useRef()
 
     const lastItemRef = useCallback((node) => {
